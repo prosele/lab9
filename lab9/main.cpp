@@ -11,15 +11,22 @@ T sum(T* array, size_t count) {
     }
     return result;
 }
-template <>
+/*template <>
 string sum <string> (string* array, size_t count) {
     long long result = 0;
     for (int i = 0; i < count; i++) {
         result += stoll(array[i]);
     }
     return to_string(result);
+}*/
+template <>
+string sum <string> (string* array, size_t count) {
+    string result = "";
+    for (int i = 0; i < count; i++) {
+        result += array[i];
+    }
+    return result;
 }
-
 int main() {
     size_t count = 10;
     int intArray[] = {200, 14, 3, 8456, 0, -889, -7, -100, 55, -92};
